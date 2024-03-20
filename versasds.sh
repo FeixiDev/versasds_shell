@@ -19,7 +19,7 @@ esac
 
 # 执行vsdsipconf
 echo "-------------------------------------------------------------------"
-vsdsipconf_path="${VSDS_PATH}/vsdsipconf-v1.0.1/vsdsipconf"
+vsdsipconf_path="${VSDS_PATH}/vsdsipconf-v1.0.2/vsdsipconf"
 
 if [ -f "${vsdsipconf_path}" ]; then
     echo "安装网络配置工具，若已安装可跳过"
@@ -27,7 +27,7 @@ if [ -f "${vsdsipconf_path}" ]; then
     case "$choice" in 
         y|Y ) 
             # 执行脚本
-            cd "${VSDS_PATH}/vsdsipconf-v1.0.1"
+            cd "${VSDS_PATH}/vsdsipconf-v1.0.2"
             ./vsdsipconf
             ;;
         n|N ) 
@@ -170,7 +170,7 @@ fi
 
 # 执行vsdsinstaller-u，安装 VersaSDS - Pacemaker/Corosync/crmsh  + targetcli
 echo "-------------------------------------------------------------------"
-installeru_path="${VSDS_PATH}/vsdsinstaller-u-v1.0.1/vsdsinstaller-u"
+installeru_path="${VSDS_PATH}/vsdsinstaller-u-v1.0.2/vsdsinstaller-u"
 
 if [ -f "${installeru_path}" ]; then
     # echo "安装高可用软件和网络配置工具"
@@ -179,7 +179,7 @@ if [ -f "${installeru_path}" ]; then
     case "$choice" in 
         y|Y ) 
             # 执行脚本
-            cd "${VSDS_PATH}/vsdsinstaller-u-v1.0.1"
+            cd "${VSDS_PATH}/vsdsinstaller-u-v1.0.2"
             ./vsdsinstaller-u
             # cp /usr/lib/ocf/resource.d/heartbeat/portblock /usr/lib/ocf/resource.d/heartbeat/portblock.bak
             # cp /usr/lib/ocf/resource.d/linbit/drbd /usr/lib/ocf/resource.d/linbit/drbd.bak
